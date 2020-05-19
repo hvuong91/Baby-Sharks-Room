@@ -10,6 +10,7 @@
 TODO
 
 ## About the project
+
 TODO
 
 ## Getting Started
@@ -21,27 +22,29 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-TODO
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-```sh
-npm install npm@latest -g
-```
+NodeJs is required. See https://nodejs.org/en/ for installation instructions.
 
 ### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
+Install latest Express
 ```
-Give the example
+npm install -g express@latest
 ```
 
-And repeat
+Install all required dependencies
 
 ```
-until finished
+npm install
+```
+
+Install nodemon for development
+
+```
+npm install -g nodemon
+```
+
+Run the following command, verify it works on localhost:3000
+```
+npm start dev
 ```
 
 ## Deployment
