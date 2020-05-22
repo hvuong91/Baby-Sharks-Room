@@ -42,6 +42,7 @@ app.use(function(err, req, res, next) {
 
 // Establish connection to db
 console.log("Establishing database connection...");
-db.Connect();
+db.connect();
+db.setupSchema();
 
 module.exports = app;

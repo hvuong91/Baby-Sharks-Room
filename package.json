@@ -7,6 +7,7 @@
     "dev": "cross-env NODE_ENV=development RDS_HOSTNAME=localhost RDS_USERNAME=postgres RDS_PASSWORD=root RDS_PORT=5432 nodemon ./bin/www"
   },
   "dependencies": {
+    "async": "^3.2.0",
     "cookie-parser": "~1.4.4",
     "cross-env": "^7.0.2",
     "debug": "~2.6.9",
