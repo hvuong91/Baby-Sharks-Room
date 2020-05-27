@@ -9,7 +9,10 @@ var usersRouter = require('./routes/users');
 var reactClient = require('./routes/reactClient')
 var cors = require('cors');
 var app = express();
+var port = 5000;
 
+//Set port
+app.listen(port, () => console.log(`Listening on port ${port}`));
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
