@@ -27,11 +27,13 @@ function setupSchema(){
                           'email VARCHAR(100), ' +
                           'password VARCHAR(40))', callback);
       },
-      function insertTempUsers(callback){
-        pool.query('INSERT INTO babysharks.users (firstName, lastName, userName, email, password)'
-              + ' VALUES ("John", "Doe", "djohn", "jdoe@gmail.com", "needtobeencrypted")', callback);
-              pool.query('INSERT INTO babysharks.users (firstName, lastName, userName, email, password)'
-                    + ' VALUES ("Zayan ", "Hamer", "hzayan", "hzayan@gmail.com", "needtobeencryptedtoo")', callback);
+      function insertTempUser1(callback){
+        pool.query("INSERT INTO babysharks.users (firstName, lastName, userName, email, password)"
+              + " VALUES ('John', 'Doe', 'djohn', 'jdoe@gmail.com', 'needtobeencrypted')", callback);
+      },
+      function insertTempUser2(callback){
+        pool.query("INSERT INTO babysharks.users (firstName, lastName, userName, email, password)"
+              + " VALUES ('Zayan', 'Hamer', 'hzayan', 'hzayan@gmail.com', 'needtobeencryptedtoo')", callback);
       }
     ], function (err, result){
       if (err){
