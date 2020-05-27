@@ -33,6 +33,7 @@ npm install -g express@latest
 Install all required dependencies
 
 ```
+cd server
 npm install
 ```
 
@@ -44,8 +45,7 @@ npm install -g nodemon
 Install all required dependencies for Client
 
 ```
-cd client
-npm install
+npm run client-install
 ```
 
 Run the following command, verify it works on localhost:3000
