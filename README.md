@@ -41,10 +41,16 @@ Install nodemon for development
 ```
 npm install -g nodemon
 ```
+Install all required dependencies for Client
+
+```
+cd client
+npm install
+```
 
 Run the following command, verify it works on localhost:3000
 ```
-npm start dev
+npm run dev
 ```
 
 ## Deployment
