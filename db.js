@@ -26,6 +26,12 @@ function setupSchema(){
                           'userName VARCHAR(40), ' +
                           'email VARCHAR(100), ' +
                           'password VARCHAR(40))', callback);
+      },
+      function insertTempUsers(callback){
+        pool.query('INSERT INTO babysharks.users (firstName, lastName, userName, email, password)'
+              + ' VALUES ("John", "Doe", "djohn", "jdoe@gmail.com", "needtobeencrypted")', callback);
+              pool.query('INSERT INTO babysharks.users (firstName, lastName, userName, email, password)'
+                    + ' VALUES ("Zayan ", "Hamer", "hzayan", "hzayan@gmail.com", "needtobeencryptedtoo")', callback);
       }
     ], function (err, result){
       if (err){
