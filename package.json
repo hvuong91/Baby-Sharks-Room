@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "dev": "cross-env NODE_ENV=development RDS_HOSTNAME=localhost RDS_USERNAME=postgres RDS_PASSWORD=root RDS_PORT=5432 nodemon ./bin/www"
+    "dev": "cross-env NODE_ENV=development RDS_HOSTNAME=localhost RDS_USERNAME=postgres RDS_PASSWORD=root RDS_DB_NAME=postgres RDS_PORT=5432 nodemon ./bin/www"
   },
   "dependencies": {
     "async": "^3.2.0",
