@@ -2,19 +2,18 @@
   "name": "baby-sharks-room",
   "version": "0.0.0",
   "private": true,
+  "main": "server.js",
   "scripts": {
-    "start": "node ./bin/www",
-    "dev": "nodemon ./bin/www"
+    "client-install": "cd client && npm install",
+    "server-install": "cd server && npm install",
+    "start": "node ./server/bin/www",
+    "server": "nodemon ./server/bin/www",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "update-server": "cd server && npm i -g npm-check-updates && npm install",
+    "update-client": "cd client && npm i -g npm-check-updates && npm install"
   },
   "dependencies": {
-    "cookie-parser": "~1.4.4",
-    "debug": "~2.6.9",
-    "express": "~4.16.1",
-    "http-errors": "~1.6.3",
-    "morgan": "~1.9.1",
-    "pug": "^2.0.4"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.4"
+    "concurrently": "^3.5.1"
   }
 }

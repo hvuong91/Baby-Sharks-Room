@@ -1,4 +1,4 @@
-# Baby-Sharks-Room
+# Baby-Sharks-Room Server
 <p align="center">
   <img src="https://lh3.googleusercontent.com/proxy/jEiVv9F2ga_Tcu2pLyczTFGaJbgmLxbkRGwNRB_v9ZZ7170mW3vJUqUDWnu2XPmU6rzw3tj9E3uQlXa2wSnGA7S2t1vnzb4FJI7YLDikYFFa5jfqvOCboxFB2BN8yrLeaVAoXytx4RTBY_ano6x6PnvjmvPHUR76" width="200" height=200" />
   <p align="center">Where the drawning baby sharks can be found.</p>
@@ -30,10 +30,10 @@ Install latest Express
 npm install -g express@latest
 ```
 
-Install all server required dependencies
+Install all required dependencies
 
 ```
-npm run server-install
+npm install
 ```
 
 Install nodemon for development
