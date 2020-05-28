@@ -30,11 +30,10 @@ Install latest Express
 npm install -g express@latest
 ```
 
-Install all required dependencies
+Install all server required dependencies
 
 ```
-cd server
-npm install
+npm run server-install
 ```
 
 Install nodemon for development
