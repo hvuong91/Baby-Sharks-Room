@@ -11,9 +11,13 @@
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "update-server": "cd server && npm i -g npm-check-updates && npm install",
-    "update-client": "cd client && npm i -g npm-check-updates && npm install"
+    "update-client": "cd client && npm i -g npm-check-updates && npm install",
+    "prestart": "npm install && npm run client-install && npm run server-install && npm run build-client",
+    "postinstall": "npm run client-install && npm run server-install",
+    "build-client": "cd client && npm run build"
   },
   "dependencies": {
-    "concurrently": "^3.5.1"
+    "concurrently": "^3.5.1",
+    "cross-env": "^7.0.2"
   }
 }
