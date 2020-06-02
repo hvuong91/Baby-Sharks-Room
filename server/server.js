@@ -54,11 +54,6 @@ const pool = new Pool({
 pool.connect();
 
 // callback - checkout a client
-pool.query('SELECT * FROM baby_sharks_room_schema.users', (err, res) => {
-  if (err) {
-    throw err
-  }
-  console.log('user:', res.rows)
-});
+
 
 module.exports = app;
