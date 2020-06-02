@@ -11,5 +11,10 @@ router.get('/', async (req, res, next) => {
 });
 
 
+router.get('/:id', async (req, res, next) => {
+  const {id} = req.params;
+  const user = await usersDAO.getUserById(id);
+  res.send(user.rows[0]);
+});
 
 module.exports = router;
