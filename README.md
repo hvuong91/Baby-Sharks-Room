@@ -56,7 +56,7 @@ baby_sharks_room_db
 
 Import dump data with the following command
 ```
-psql -U postgres -d baby_sharks_room_db -f database\baby_sharks_room_db.sql
+psql -U postgres -d baby_sharks_room_db -f server\database\baby_sharks_room_db.sql
 ```
 
 Run the following command, verify it works on localhost:3000
