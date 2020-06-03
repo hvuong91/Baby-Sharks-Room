@@ -1,38 +1,36 @@
 import React, {Component} from 'react';
-import logo from './logo.svg';
+
 import './App.css';
+import Header from './components/Header';
+import AppIntro from './components/AppIntro';
+import SignIn from './components/SignIn';
 
 class App extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            data: ""
-        };
-    }
+  constructor(props) {
+      super(props);
+      this.state = {
+          data: ""
+      };
+  }
 
-// Fetches our GET route from the Express server. (Note the route we are fetching matches the GET route from server.js
-    callBackendAPI() {
-        fetch('/react_client').then(res => res.text())
-            .then(res => this.setState({data: res}))
-            .catch(err => console.log(err));
-    }
+  render() {
 
-    componentDidMount() {
-        // Call our fetch function below once the component mounts
-        this.callBackendAPI();
-    }
+    const customStyle = {
+      width: "70%",
+      margin: "auto",
+      marginTop: "5%",
+    };
 
-    render() {
-        return (
-            <div className="App">
-                <header className="App-header">
-                    <img src={logo} className="App-logo" alt="logo"/>
-                    <h1 className="App-title">Welcome to React</h1>
-                </header>
-                <h3 className="App-intro">{this.state.data}</h3>
-            </div>
-        );
-    }
+    return (
+        <div className="App">
+          <Header />
+          <div className="row" style={customStyle}>
+            <SignIn />
+            <AppIntro />
+          </div>
+        </div>
+    );
+  }
 }
 
 export default App;
